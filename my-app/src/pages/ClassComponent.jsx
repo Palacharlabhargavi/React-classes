@@ -1,15 +1,24 @@
 import React from 'react';
+import BaseHoc from '../hoc/BaseHoc';
 
 class ClassComponent extends React.Component{
-render(){
-    return (
-        <div className="App">
-          <header className="App-header">
-          <p>This is class Components</p>
-          </header>
-        </div>
-      );
+  constructor(props){
+    super(props)
+
+    this.state={
+      name:"bhargavi",
+      age:"23"
+    }
+  }
+  render(){
+      return (
+          <>
+            
+            <p>This is class Components</p>
+            
+          </>
+        );
 }
 }
 
-export default ClassComponent;
+export default BaseHoc(ClassComponent);
